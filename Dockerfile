@@ -3,7 +3,7 @@ MAINTAINER eshizhan <eshizhan@126.com>
 
 RUN sed -i 's/archive.ubuntu.com/cn.archive.ubuntu.com/g' /etc/apt/sources.list
 RUN apt-get update -y && \
-    apt-get -y install openssh-server vim-tiny iproute2 curl netcat-openbsd --no-install-recommends && \
+    apt-get -y install openssh-server vim-tiny iproute2 inetutils-ping curl netcat-openbsd --no-install-recommends && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN echo 'root:root' | chpasswd
