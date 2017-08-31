@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-MAINTAINER eshizhan <eshizhan@126.com>
+LABEL maintainer="eshizhan <eshizhan@126.com>"
 
 RUN sed -i 's/archive.ubuntu.com/cn.archive.ubuntu.com/g' /etc/apt/sources.list
 RUN apt-get update -y && \
